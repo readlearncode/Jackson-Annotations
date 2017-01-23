@@ -31,9 +31,14 @@ public class JsonRawValueTest {
 
         /*
             {
+              "id": "7674fbec-527f-4008-a619-f9967cd0cbe0",
               "firstName": "Alex",
               "lastName": "Theedom",
-              "publications": []
+              "configuration": {
+                "colour": "red",
+                "device": "mobile",
+                "orientation": "landscape"
+              }
             }
         */
 

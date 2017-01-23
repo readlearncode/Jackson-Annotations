@@ -13,8 +13,12 @@ import java.util.List;
  * @author Alex Theedom www.readlearncode.com
  * @version 1.0
  */
-@JsonPropertyOrder({"items", "firstName", "lastName", "id"})
+@JsonPropertyOrder(value = {"items", "firstName", "lastName", "id"}, alphabetic = true)
 public class Author extends Person {
+
+    private String zIndex;
+
+    private String alphaIndex;
 
     List<Item> items = new ArrayList<>();
 
@@ -28,5 +32,21 @@ public class Author extends Person {
 
     public void setItems(List<Item> items) {
         this.items = items;
+    }
+
+    public String getzIndex() {
+        return zIndex;
+    }
+
+    public void setzIndex(String zIndex) {
+        this.zIndex = zIndex;
+    }
+
+    public String getAlphaIndex() {
+        return alphaIndex;
+    }
+
+    public void setAlphaIndex(String alphaIndex) {
+        this.alphaIndex = alphaIndex;
     }
 }

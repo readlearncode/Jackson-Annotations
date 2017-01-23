@@ -18,12 +18,20 @@
     },
     "id": {
       "type": "string"
+    },
+    "zIndex": {
+      "type": "string"
+    },
+    "alphaIndex": {
+      "type": "string"
     }
   },
   "required": [
     "items",
     "firstName",
     "lastName",
-    "id"
+    "id",
+    "alphaIndex",
+    "zIndex"
   ]
 }

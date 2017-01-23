@@ -23,5 +23,32 @@ public class JsonValueTest {
         // assert
         assertThat(result).isEqualTo("\"Advanced\"");
 
+        /*
+
+        "Advanced"
+
+         */
+
+    }
+
+    @Test
+    public void whenSerializingAuthorUsingJsonValue_thenFirstNameAndLastNameAreConcatenated() throws JsonProcessingException {
+
+        // arrange
+        Author me = new Author("Alex", "Theedom");
+
+        // act
+        String result = new ObjectMapper().writeValueAsString(me);
+
+        // assert
+        assertThat(result).contains("Alex Theedom");
+
+        /*
+            {
+              "name": "Alex Theedom"
+            }
+
+         */
+
     }
 }

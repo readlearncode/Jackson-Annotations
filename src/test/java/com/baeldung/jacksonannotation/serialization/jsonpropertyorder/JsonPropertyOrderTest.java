@@ -20,6 +20,8 @@ public class JsonPropertyOrderTest {
 
         // arrange
         Author author = new Author("Alex", "Theedom");
+        author.setzIndex("z123");
+        author.setAlphaIndex("z123");
 
         // act
         String result = new ObjectMapper().writeValueAsString(author);
@@ -34,7 +36,9 @@ public class JsonPropertyOrderTest {
               "items": [],
               "firstName": "Alex",
               "lastName": "Theedom",
-              "id": "fd277638-9b6e-49f7-81c1-bc52f165245b"
+              "id": "31ca2af9-df0a-4d49-a74c-86c0a3f944a2",
+              "alphaIndex": "z123",
+              "zIndex": "z123"
             }
         */
 
